@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 
 export function InvestmentAreas() {
   const areas = [
@@ -27,7 +27,7 @@ export function InvestmentAreas() {
     },
   ];
 
-  const headerVariants = {
+  const headerVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -39,7 +39,7 @@ export function InvestmentAreas() {
     },
   };
 
-  const imageVariants = (fromLeft: boolean) => ({
+  const imageVariants = (fromLeft: boolean): Variants => ({
     hidden: { opacity: 0, x: fromLeft ? -100 : 100, scale: 0.9 },
     visible: {
       opacity: 1,
@@ -52,7 +52,7 @@ export function InvestmentAreas() {
     },
   });
 
-  const contentVariants = (fromRight: boolean) => ({
+  const contentVariants = (fromRight: boolean): Variants => ({
     hidden: { opacity: 0, x: fromRight ? 100 : -100 },
     visible: {
       opacity: 1,

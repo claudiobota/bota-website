@@ -2,8 +2,7 @@
 
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { motion } from 'framer-motion';
-import Layer1Light from '@/assets/svg/Layer1Light';
+import { motion, Variants } from 'framer-motion';
 
 export function Hero() {
   const scrollToContact = () => {
@@ -14,7 +13,7 @@ export function Hero() {
     document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -25,7 +24,7 @@ export function Hero() {
     },
   };
 
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
@@ -37,7 +36,7 @@ export function Hero() {
     },
   };
 
-  const imageVariants = {
+  const imageVariants: Variants = {
     hidden: { opacity: 0, scale: 0.9, x: 50 },
     visible: {
       opacity: 1,
