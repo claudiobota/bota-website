@@ -1,29 +1,41 @@
 import type { Metadata, Viewport } from "next";
+import { Inter, Playfair_Display } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
-import { Toaster } from "@/components/ui/sonner";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: "BOTA Holdings | Accelerating Innovation, Delivering Excellence",
-  description: "Premier multi-strategy investment firm that identifies and accelerates breakthrough innovations with transformative potential. Strategic capital and operational expertise for exponential growth.",
-  keywords: ["investment firm", "venture capital", "healthcare innovation", "sustainable technology", "education technology", "BOTA Holdings", "strategic investment"],
-  openGraph: {
-    type: "website",
-    siteName: "BOTA Holdings",
-    title: "BOTA Holdings | Accelerating Innovation, Delivering Excellence",
-    description: "Premier multi-strategy investment firm that identifies and accelerates breakthrough innovations with transformative potential.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "BOTA Holdings | A New Standard for Family Capital",
+    template: "%s | BOTA Holdings",
   },
-  robots: {
-    index: true,
-    follow: true,
+  description:
+    "Founded in 2016, BOTA Holdings is an independent multi-family office pairing institutional rigor with the patience and discretion of a private partnership.",
+  openGraph: {
+    siteName: "BOTA Holdings",
+    locale: "en_US",
+    type: "website",
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  maximumScale: 1,
-  minimumScale: 1,
-  userScalable: false,
 };
 
 export default function RootLayout({
@@ -32,10 +44,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="antialiased">
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300..700,0..1,0&display=swap"
+        />
+      </head>
+      <body className="bg-background text-on-surface font-sans antialiased">
         {children}
-        <Toaster />
       </body>
     </html>
   );

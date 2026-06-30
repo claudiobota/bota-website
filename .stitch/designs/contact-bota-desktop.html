@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#e7e8e9",
+                    "secondary": "#515f78",
+                    "error-container": "#ffdad6",
+                    "on-surface-variant": "#434843",
+                    "on-primary-fixed-variant": "#364c3c",
+                    "on-secondary-fixed-variant": "#39475f",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#ffd9dc",
+                    "secondary-fixed": "#d6e3ff",
+                    "inverse-surface": "#2e3132",
+                    "tertiary-container": "#3f2427",
+                    "on-surface": "#191c1d",
+                    "secondary-container": "#d2e0fe",
+                    "tertiary-fixed-dim": "#e7bcbf",
+                    "surface": "#f8f9fa",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-on-surface": "#f0f1f2",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#4d6453",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#55637d",
+                    "inverse-primary": "#b4cdb8",
+                    "on-tertiary-fixed-variant": "#5d3f42",
+                    "on-tertiary-fixed": "#2d1417",
+                    "on-primary": "#ffffff",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "background": "#f8f9fa",
+                    "primary-fixed-dim": "#b4cdb8",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "primary": "#061b0e",
+                    "surface-variant": "#e1e3e4",
+                    "on-error-container": "#93000a",
+                    "surface-dim": "#d9dadb",
+                    "outline": "#737973",
+                    "on-tertiary-container": "#b0898c",
+                    "surface-container": "#edeeef",
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#0b2013",
+                    "on-secondary-fixed": "#0d1c32",
+                    "primary-container": "#1b3022",
+                    "primary-fixed": "#d0e9d4",
+                    "outline-variant": "#c3c8c1",
+                    "tertiary": "#271013",
+                    "on-primary-container": "#819986",
+                    "secondary-fixed-dim": "#b9c7e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "container-max": "1280px",
+                    "section-gap": "120px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "label-caps": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "headline-sm": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-blur {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.7);
+        }
+        .form-input-focus:focus {
+            border-bottom-color: #061b0e;
+            outline: none;
+        }
+        .bento-card-hover:hover .card-img {
+            scale: 1.05;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="bg-surface/95 dark:bg-primary/95 backdrop-blur-md border-b border-outline-variant/30 fixed top-0 w-full z-50">
+<nav class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-24">
+<div class="flex items-center gap-12">
+<a class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary dark:text-primary-fixed" href="#">BOTA Holdings</a>
+<div class="hidden md:flex gap-8">
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps" href="#">Heritage</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps" href="#">Strategy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps" href="#">Investments</a>
+<a class="text-secondary dark:text-secondary-fixed-dim font-medium hover:text-primary dark:hover:text-primary-fixed transition-colors font-label-caps text-label-caps" href="#">Philanthropy</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity" data-icon="language">language</span>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps tracking-widest hover:opacity-90 transition-all active:scale-95">
+                    Private Client Portal
+                </button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Split Section -->
+<section class="min-h-[870px] flex flex-col md:flex-row items-stretch overflow-hidden">
+<!-- Image Side -->
+<div class="w-full md:w-1/2 relative min-h-[400px]">
+<img alt="Corporate Boardroom" class="absolute inset-0 w-full h-full object-cover" data-alt="A serene and authoritative board room with a large, polished dark wood table reflecting soft overhead light. The room features floor-to-ceiling windows overlooking a misty, high-end city skyline at dusk. The interior is characterized by deep navy and forest green accents, minimalist leather chairs, and a clean architectural aesthetic. The lighting is low-key and professional, creating an atmosphere of exclusivity and multi-generational trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-JxxGt5tGcLfpCtRibdm2vtxpf736HtY0CkrifBgoRVnotb3OgGDikY0yvFHP7_pW48SSm3rQZSRU3IuSaNpD8UrgRNUZLh8sNBf48A3LeUc1UHptE1DemZyueXDxGs6pK_m3M1gQFnaWY7uuiLvjDG-hFLqmr4QzvzBGYcVJyHNkFFWq_BYdmpdipvKJ7yCzKSZ1PRkZZVQsiocIkhsvlpF1X7R3-wQxJuYvENdJnpN0R07pq9cOQzHjFJtc3G9r2H8D7fmQtEw"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<!-- Form Side -->
+<div class="w-full md:w-1/2 flex items-center justify-center p-12 lg:p-24 bg-surface-container-lowest">
+<div class="max-w-md w-full">
+<span class="font-label-caps text-label-caps text-primary/60 mb-4 block">Private Client Access</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8">Inquiry Brief</h1>
+<p class="font-body-lg text-body-lg text-secondary mb-12">Discretion is our cornerstone. Complete this brief to initiate a private consultation with our Estate Office.</p>
+<form class="space-y-10">
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary group-focus-within:text-primary transition-colors">Full Name</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-4 px-0 font-body-md text-body-md form-input-focus transition-all" placeholder="Johnathan Abernathy" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary group-focus-within:text-primary transition-colors">Private Email Address</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent py-4 px-0 font-body-md text-body-md form-input-focus transition-all" placeholder="client@private.com" type="email"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary group-focus-within:text-primary transition-colors">Nature of Interest</label>
+<select class="w-full border-0 border-b border-outline-variant bg-transparent py-4 px-0 font-body-md text-body-md form-input-focus transition-all appearance-none cursor-pointer">
+<option>Generational Wealth Strategy</option>
+<option>Private Equity Partnerships</option>
+<option>Philanthropic Advisory</option>
+<option>Global Real Estate Portfolio</option>
+</select>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-secondary group-focus-within:text-primary transition-colors">Confidential Message</label>
+<textarea class="w-full border-0 border-b border-outline-variant bg-transparent py-4 px-0 font-body-md text-body-md form-input-focus transition-all resize-none" placeholder="Brief context for your inquiry..." rows="3"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-label-caps text-label-caps tracking-widest hover:opacity-90 transition-all active:scale-[0.98] flex items-center justify-center gap-4" type="submit">
+                            Send Discreet Inquiry
+                            <span class="material-symbols-outlined" data-icon="lock">lock</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Global Offices Section -->
+<section class="py-section-gap max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary/60 mb-2 block">Our Footprint</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Global Offices</h2>
+</div>
+<p class="max-w-md font-body-md text-body-md text-secondary">Strategically located in the world's leading financial centers to serve our clients' multi-jurisdictional needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- London -->
+<div class="group cursor-default border border-outline-variant/30 hover:border-primary/20 transition-all duration-500 overflow-hidden bento-card-hover">
+<div class="h-64 overflow-hidden">
+<img alt="London Office" class="w-full h-full object-cover grayscale brightness-75 transition-transform duration-700 card-img" data-alt="A moody, high-contrast monochrome photograph of the iconic Shard and London skyline from across the Thames. The image features dramatic shadows and a refined architectural perspective, reflecting a prestigious and established atmosphere. The overall aesthetic is clean, minimalist, and deeply rooted in a sense of historical authority and global financial power." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc3KWvLrpxfpeqPRBbtVLH6UIH2hSnD9Id4ssZm0qXleI6cy_SwOi_Rp2Iz6227OKNvI8RYrqjrs5IPyZQtU9yMMPpzE0pxZ55Wil3ZJpdlmq1PUorLLqX7JKG-sq559TJ9tIwx7D_NHNDxeVLRdW_LOET4F-KBMJ7iZKDhfVDi9SWKTCDQxEpJxpgiLvtq3vkpNdTN64X8p7W1M8qK5s85AbljX-SfjRp7z68PCC5ASI9c3rDA0-seHnHs86OdnkuHWDZJNwZUss"/>
+</div>
+<div class="p-8 space-y-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">London</h3>
+<div class="space-y-4 font-body-md text-body-md text-secondary">
+<p>Mayfair Square, W1J 7BR<br/>United Kingdom</p>
+<p class="pt-4 border-t border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                                +44 20 7946 0123
+                            </p>
+</div>
+</div>
+</div>
+<!-- Zurich -->
+<div class="group cursor-default border border-outline-variant/30 hover:border-primary/20 transition-all duration-500 overflow-hidden bento-card-hover">
+<div class="h-64 overflow-hidden">
+<img alt="Zurich Office" class="w-full h-full object-cover grayscale brightness-75 transition-transform duration-700 card-img" data-alt="A sophisticated black and white architectural shot of Zurich's Bahnhofstrasse at dawn. The image emphasizes the clean lines of neoclassical buildings and the quiet, orderly streets. The lighting is soft and atmospheric, highlighting the city's reputation for stability, discretion, and high-precision banking. The aesthetic is extremely polished and timelessly elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9zWHgKOmrNQzvNi0P7OXgEwLNQrBpbNtpvreMpRuPJT7RMieqO9oA6twrlMGp0ecmw8B2R38UCZWCWNpEWRgqHXcAcG9eIWJN89lH4tEPZxX-L4yMyES8WqNuTDS3qKtS-0kZ2StwsWASHSbpRyK1niZpRqKKCkRuvvSv7KuCHZaBJWpH6SfmYfdlvo9RtFQHH1acnkcTSfreBWXIk7oHh-g_MRa2zqVEwcus4ECF6f5WuzA1euiWP3Cf-jmHyPqyzQhoH3MYmSA"/>
+</div>
+<div class="p-8 space-y-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Zurich</h3>
+<div class="space-y-4 font-body-md text-body-md text-secondary">
+<p>Bahnhofstrasse 12, 8001<br/>Switzerland</p>
+<p class="pt-4 border-t border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                                +41 44 211 44 00
+                            </p>
+</div>
+</div>
+</div>
+<!-- Singapore -->
+<div class="group cursor-default border border-outline-variant/30 hover:border-primary/20 transition-all duration-500 overflow-hidden bento-card-hover">
+<div class="h-64 overflow-hidden">
+<img alt="Singapore Office" class="w-full h-full object-cover grayscale brightness-75 transition-transform duration-700 card-img" data-alt="A modern, high-angle monochrome shot of Singapore's Marina Bay Financial Centre. The photograph captures the sleek glass facades of skyscrapers and the geometric precision of the urban planning. The lighting creates a dynamic interplay of highlights and shadows, projecting a mood of innovation, prosperity, and the forward-looking nature of Asian wealth management." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrHtFvATlNevSJRJ4DwKFswXEYRF8zpCFK38vGENi3tbNsZBHgiAxxps2S0ocdVVpnE7K1KM2XNcZaMmelJdWavwru5Y6Vu9d3e2bgHZ2GbEIsM8szP400WyxsloSbXLHsSnZiLpQq-ojXaK9QH3KK-6OVlOKunIVUTXsZS_fg6XybJbIKh512IXVd-C2dtbcKqWGtLAIu_I8YB1zKrTWxbXhjy3WQF6Rqwaj28TArV5_YGF58mU09rPvBDBBnKmNjcIkoA5ycowE"/>
+</div>
+<div class="p-8 space-y-6">
+<h3 class="font-headline-sm text-headline-sm text-primary">Singapore</h3>
+<div class="space-y-4 font-body-md text-body-md text-secondary">
+<p>10 Marina Boulevard, 018983<br/>Singapore</p>
+<p class="pt-4 border-t border-outline-variant/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+                                +65 6838 1234
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-surface-container-lowest border-t border-primary-container dark:border-outline-variant">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1">
+<span class="font-headline-sm text-headline-sm text-on-primary dark:text-primary font-bold">BOTA</span>
+<p class="mt-6 font-body-md text-body-md text-on-primary-container dark:text-secondary max-w-xs">
+                    © 2024 BOTA Holdings. All rights reserved. BOTA is a registered investment advisor. Regulatory disclosures and performance data available upon request.
+                </p>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-on-primary dark:text-primary">Ecosystem</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Heritage</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Strategy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Investments</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Philanthropy</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-on-primary dark:text-primary">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Regulatory Disclosures</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Terms of Engagement</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-on-primary dark:text-primary">Global Presence</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Global Offices</a></li>
+<li><a class="font-body-md text-body-md text-on-primary-container dark:text-secondary hover:text-on-primary dark:hover:text-primary transition-colors" href="#">Sitemap</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Subtle atmosphere: parallax-like effect on hero image scroll
+        window.addEventListener('scroll', () => {
+            const scroll = window.scrollY;
+            const heroImg = document.querySelector('[data-alt^="A serene and authoritative board room"]');
+            if(heroImg) {
+                heroImg.style.transform = `translateY(${scroll * 0.1}px)`;
+            }
+        });
+
+        // Form Submission Micro-interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalContent = btn.innerHTML;
+            btn.innerHTML = 'Establishing Secure Connection...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Brief Transmitted Successfully';
+                btn.classList.replace('bg-primary', 'bg-surface-tint');
+                setTimeout(() => {
+                    btn.innerHTML = originalContent;
+                    btn.disabled = false;
+                    btn.classList.remove('opacity-50');
+                    btn.classList.replace('bg-surface-tint', 'bg-primary');
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>

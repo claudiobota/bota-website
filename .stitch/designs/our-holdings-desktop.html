@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(248, 249, 250, 0.95), rgba(248, 249, 250, 0));
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-high": "#e7e8e9",
+                "secondary": "#515f78",
+                "error-container": "#ffdad6",
+                "on-surface-variant": "#434843",
+                "on-primary-fixed-variant": "#364c3c",
+                "on-secondary-fixed-variant": "#39475f",
+                "on-secondary": "#ffffff",
+                "tertiary-fixed": "#ffd9dc",
+                "secondary-fixed": "#d6e3ff",
+                "inverse-surface": "#2e3132",
+                "tertiary-container": "#3f2427",
+                "on-surface": "#191c1d",
+                "secondary-container": "#d2e0fe",
+                "tertiary-fixed-dim": "#e7bcbf",
+                "surface": "#f8f9fa",
+                "surface-container-low": "#f3f4f5",
+                "inverse-on-surface": "#f0f1f2",
+                "error": "#ba1a1a",
+                "surface-tint": "#4d6453",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#55637d",
+                "inverse-primary": "#b4cdb8",
+                "on-tertiary-fixed-variant": "#5d3f42",
+                "on-tertiary-fixed": "#2d1417",
+                "on-primary": "#ffffff",
+                "on-background": "#191c1d",
+                "surface-container-highest": "#e1e3e4",
+                "background": "#f8f9fa",
+                "primary-fixed-dim": "#b4cdb8",
+                "surface-container-lowest": "#ffffff",
+                "surface-bright": "#f8f9fa",
+                "primary": "#061b0e",
+                "surface-variant": "#e1e3e4",
+                "on-error-container": "#93000a",
+                "surface-dim": "#d9dadb",
+                "outline": "#737973",
+                "on-tertiary-container": "#b0898c",
+                "surface-container": "#edeeef",
+                "on-error": "#ffffff",
+                "on-primary-fixed": "#0b2013",
+                "on-secondary-fixed": "#0d1c32",
+                "primary-container": "#1b3022",
+                "primary-fixed": "#d0e9d4",
+                "outline-variant": "#c3c8c1",
+                "tertiary": "#271013",
+                "on-primary-container": "#819986",
+                "secondary-fixed-dim": "#b9c7e4"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "gutter": "32px",
+                "container-max": "1280px",
+                "section-gap": "120px",
+                "margin-desktop": "64px",
+                "margin-mobile": "24px",
+                "base": "8px"
+            },
+            "fontFamily": {
+                "label-caps": ["Inter"],
+                "display-lg": ["Playfair Display"],
+                "body-lg": ["Inter"],
+                "headline-md": ["Playfair Display"],
+                "headline-lg": ["Playfair Display"],
+                "body-md": ["Inter"],
+                "headline-sm": ["Playfair Display"]
+            },
+            "fontSize": {
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="bg-surface/95 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-margin-desktop flex justify-between items-center h-24">
+<div class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary">BOTA Holdings</div>
+<div class="hidden md:flex space-x-12 items-center">
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Heritage</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Strategy</a>
+<a class="font-body-md text-body-md text-primary border-b-2 border-primary pb-1" href="#">Investments</a>
+<a class="font-body-md text-body-md text-secondary hover:text-primary transition-colors" href="#">Philanthropy</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary hover:bg-surface-container-low p-2 rounded-full transition-all">language</button>
+<button class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 rounded-DEFAULT hover:opacity-90 transition-all">Private Client Portal</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-24">
+<!-- Hero Branding Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">PORTFOLIO OVERVIEW</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8">Legacy &amp; Liquidity</h1>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                    BOTA Holdings manages a globally diversified portfolio focused on long-term value creation. Our approach balances the preservation of multi-generational heritage with the precision of modern capital deployment across three primary pillars.
+                </p>
+</div>
+</section>
+<!-- Our Global Footprint: The Core Pillars -->
+<section class="pb-section-gap px-margin-desktop max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12">Our Global Footprint</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Pillar 1: Private Equity -->
+<div class="group relative overflow-hidden bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/20 transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Industrial Tech" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[0.2]" data-alt="A sophisticated industrial interior showcasing high-precision automated robotics in a clean, brightly lit manufacturing facility. The scene emphasizes modern industrial technology with a palette of deep navy, charcoal, and brushed steel. The lighting is crisp and editorial, reflecting a sense of advanced engineering and institutional stability in a light-mode aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDus6_GnT-RqYOhOnMvb4BaepthM9BfIsrbrdGglWi0ujbZ3-0SYltJZzbgpVEBj24Abu2OkujouJGOUdgbSa5pWyZ2my6Cxmj3z6bdhuiVjBT8alaVid63gMUs8HlZoVj_rnVnybVckbRhHceJSY9iBIq3wE9SSdjPpGy-yRojb5afN-jhyt8cyaB3g_NKqW73vMQ6yCiNliPdOpKPBpKEEtdoRC0t649ZUU4AI3YntnC1B5hAaBHgTyIrqZ-ElctpXZ0QqMVWQJE"/>
+</div>
+<div class="p-8">
+<span class="font-label-caps text-label-caps text-on-primary-container bg-primary-fixed px-3 py-1 mb-4 inline-block">PILLAR I</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Private Equity</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Investments in industrial technology and precision manufacturing that define the next generation of global infrastructure.</p>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps group-hover:gap-2 transition-all" href="#">
+                            VIEW STRATEGY <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pillar 2: Real Estate -->
+<div class="group relative overflow-hidden bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/20 transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Commercial Real Estate" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[0.2]" data-alt="A low-angle perspective shot of a modern, Grade-A commercial skyscraper in a prestigious global financial district. The glass facade reflects a clear, pale blue sky, emphasizing verticality and architectural permanence. The aesthetic is clean and minimalist, using a cool-toned palette of glass, steel, and white concrete to evoke institutional prestige." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC76f37OEKhph6WtbzupXsC2Cg1AHdcP9TS_eK8794qVYwTvsgrtPmy2kp8--FwwGZN9pUVHg8Xz1owqVETIgd4-1Mx0k9oAuaaDgssU-2ok_jg_FNnd2CUKLZ_2MTYr2AI7L1EdFFtNk9fxAwqbPpWXOYuRWH_HR2i9lNbcwyYbLGfT0nhC0jvaNYMjQ0tQu_gyrA02mfcpmLwrFO-yNvyUEh5qCq6MhWLKpA1REfxTq9UgZr5U_2NZNwTrwuIX0Z5BIc-XiVLkU"/>
+</div>
+<div class="p-8">
+<span class="font-label-caps text-label-caps text-on-primary-container bg-primary-fixed px-3 py-1 mb-4 inline-block">PILLAR II</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Real Estate</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">A curated collection of Grade-A commercial landmarks and trophy assets in premier metropolitan markets globally.</p>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps group-hover:gap-2 transition-all" href="#">
+                            VIEW STRATEGY <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Pillar 3: Capital Markets -->
+<div class="group relative overflow-hidden bg-surface-container-lowest border border-outline-variant/30 hover:border-primary/20 transition-all duration-500">
+<div class="aspect-[4/5] overflow-hidden">
+<img alt="Capital Markets" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[0.2]" data-alt="Abstract digital data art representing financial liquidity and capital flow. Sophisticated, thin lines and glowing nodes form a complex web against a deep navy background. The visual style is elegant and technical, using a palette of dark emerald, obsidian, and faint gold highlights to signify multi-generational wealth and modern data-driven precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChvrHnGZbyjKiEBqZGMy71NprDKmD-T6oD7QD_Z5ECB1ZG2VgBzshonExcItzxax0vguphu9sYRZkWOhawGJCt1NSR9qcui5htkj61xVlhlb-_mblJih5R4rNlunxwnZaFs9zgAhTnW5WaW51BOfvhbOAdBPIH4EKTed0fgssSyoaqb7xGYaiIkYv_8Ze_As7rGXENky2ab_-lxkQ6LIzaVAFYL13Ywwe3RpvI3kO_ZRUHtTbVVq-h2RsO8lF6WDkRx3wdyj9zfcs"/>
+</div>
+<div class="p-8">
+<span class="font-label-caps text-label-caps text-on-primary-container bg-primary-fixed px-3 py-1 mb-4 inline-block">PILLAR III</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Capital Markets</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Systematic deployment of capital across global liquid markets, utilizing proprietary risk-parity models and hedging.</p>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps group-hover:gap-2 transition-all" href="#">
+                            VIEW STRATEGY <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section: Scale & Performance -->
+<section class="bg-primary text-on-primary py-24 relative overflow-hidden">
+<!-- Subtle Decorative Texture -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(#d0e9d4 1px, transparent 1px); background-size: 40px 40px;"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-4 gap-gutter relative z-10">
+<div class="md:col-span-2">
+<h2 class="font-headline-lg text-headline-lg mb-6">Institutional Scale. <br/>Bespoke Management.</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container opacity-90 max-w-md">Our global reach allows us to identify arbitrage opportunities across time zones while maintaining the focus of a single-family office.</p>
+</div>
+<div class="flex flex-col justify-center items-start border-l border-on-primary/10 pl-12">
+<span class="font-display-lg text-display-lg leading-none mb-2">12</span>
+<span class="font-label-caps text-label-caps text-on-primary-container tracking-widest uppercase">Global Offices</span>
+</div>
+<div class="flex flex-col justify-center items-start border-l border-on-primary/10 pl-12">
+<span class="font-display-lg text-display-lg leading-none mb-2">85+</span>
+<span class="font-label-caps text-label-caps text-on-primary-container tracking-widest uppercase">Portfolio Entities</span>
+</div>
+</div>
+</section>
+<!-- Geographic Focus / Map Placeholder -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-4">
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Presence Across Three Continents</h3>
+<p class="font-body-md text-body-md text-secondary mb-8">From our headquarters in Singapore to our offices in Zurich and New York, BOTA maintains a constant pulse on the world's most vital economic engines.</p>
+<ul class="space-y-4">
+<li class="flex items-center gap-4 font-body-md text-body-md text-primary">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                            EMEA (Zurich, London, Dubai)
+                        </li>
+<li class="flex items-center gap-4 font-body-md text-body-md text-primary">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                            APAC (Singapore, Tokyo, Sydney)
+                        </li>
+<li class="flex items-center gap-4 font-body-md text-body-md text-primary">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+                            AMERICAS (New York, San Francisco, São Paulo)
+                        </li>
+</ul>
+</div>
+<div class="lg:col-span-8 h-[500px] bg-surface-container-low relative overflow-hidden rounded-lg group">
+<img alt="Global Footprint Map" class="w-full h-full object-cover opacity-80 mix-blend-multiply transition-transform duration-1000 group-hover:scale-105" data-alt="A minimalist, monochromatic world map styled for a high-end financial institution. The map uses a palette of light grays and whites, with subtle glowing points of light indicating global office locations. The lighting is soft and uniform, creating a clean, institutional light-mode aesthetic that suggests global connectivity and professional oversight." data-location="Global" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbZ3jWfJ1AkL3FMH8H9QxVTrXB8AmH31jUSf2AXHS68snBavwbDf0nxKB5IeecTCBJgS7L6NZib3L4dLO2gaPJBShxmA6UetAWHEQQ1JzBaz8z1_9iS8gAcPul20hadzBUt9pnjX6wWuwtxcPoVF2nILOzgtVQR2xQJJlRqX-TaSL_ycWvUbqU3sIyLystfNOXOrIwY__997C7iehjjf-xaLcUWp4QPZijJjP2kuJmlgLQUO5oDDfMMInPSPlN-AjamQKqlrXjUHU"/>
+<div class="absolute inset-0 hero-gradient pointer-events-none"></div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1">
+<div class="font-headline-sm text-headline-sm text-on-primary mb-6">BOTA</div>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80">
+                    BOTA Holdings is a private global investment vehicle dedicated to multi-generational prosperity.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary/10 pb-2 mb-2">QUICK LINKS</span>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Global Offices</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Sitemap</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary/10 pb-2 mb-2">LEGAL</span>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Regulatory Disclosures</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors" href="#">Terms of Engagement</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-on-primary border-b border-on-primary/10 pb-2 mb-2">ENQUIRIES</span>
+<a class="font-body-md text-body-md text-on-primary-container hover:text-on-primary transition-colors underline underline-offset-4 decoration-on-primary/30" href="mailto:contact@botafamily.com">contact@botafamily.com</a>
+<p class="font-body-md text-body-md text-on-primary-container mt-4">Restricted access portal for authorized clients only.</p>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-on-primary/10">
+<p class="font-label-caps text-label-caps text-on-primary-container opacity-60">
+                © 2024 BOTA Holdings. All rights reserved. BOTA is a registered investment advisor. Regulatory disclosures and performance data available upon request.
+            </p>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
