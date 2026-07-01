@@ -111,7 +111,7 @@ const SECTIONS: LegalSection[] = [
             {
               term: "Identity",
               description:
-                "Full legal name, date of birth, citizenship, government-issued identifiers (passport, driver's license, SSN or ITIN for U.S. persons), and the documentation required by our internal Customer Identification Programme, modelled on the standards of the USA PATRIOT Act.",
+                "Full legal name, date of birth, citizenship, government-issued identifiers (passport, driving licence, SSN or ITIN for U.S. persons), and the documentation required by our internal Customer Identification Programme, modelled on the standards of the USA PATRIOT Act.",
             },
             {
               term: "Contact",

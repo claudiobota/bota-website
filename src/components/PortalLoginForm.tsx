@@ -56,7 +56,7 @@ export function PortalLoginForm() {
       setErrorMessage(
         body.message ??
           (response.status === 401
-            ? "We could not authenticate that member ID. Please contact your relationship partner to recover access."
+            ? "We could not authenticate that member ID. Please contact your founding partner to recover access."
             : "Sign-in is temporarily unavailable. Please try again later."),
       );
     } catch {

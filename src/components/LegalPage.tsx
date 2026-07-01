@@ -77,7 +77,7 @@ export function LegalPage({
   return (
     <>
       <SiteHeader />
-      <main className="pt-24">
+      <main className="pt-header">
         <LegalHero
           eyebrow={eyebrow}
           title={title}
@@ -127,7 +127,7 @@ function LegalHero({
       <div className="max-w-page mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative">
         <nav
           aria-label="Breadcrumb"
-          className="flex items-center gap-3 text-label-caps uppercase text-secondary/70 mb-12"
+          className="flex flex-wrap items-center gap-3 text-label-caps uppercase text-secondary/70 mb-12"
         >
           <Link href="/" className="hover:text-primary transition-colors">
             BOTA
@@ -305,7 +305,7 @@ function LegalCompliance({
             </p>
             <a
               href={`mailto:${complianceContact.email}`}
-              className="inline-flex items-center gap-4 border border-on-primary/40 px-8 py-5 text-label-caps uppercase hover:bg-on-primary hover:text-primary transition-all"
+              className="inline-flex items-center gap-4 border border-on-primary/40 px-6 py-4 md:px-8 md:py-5 text-label-caps uppercase hover:bg-on-primary hover:text-primary transition-all break-all"
             >
               <MaterialIcon name="mail" />
               {complianceContact.email}

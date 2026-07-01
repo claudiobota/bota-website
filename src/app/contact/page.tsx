@@ -14,7 +14,7 @@ type Office = {
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Initiate a private consultation with the BOTA Holdings Estate Office. Discretion is our cornerstone.",
+    "Initiate a private consultation with the BOTA Holdings Private Office. Discretion is our cornerstone.",
 };
 
 const HERO_IMAGE =
@@ -51,7 +51,7 @@ export default function ContactPage() {
   return (
     <>
       <SiteHeader />
-      <main className="pt-24">
+      <main className="pt-header">
         <InquirySection />
         <OfficesSection />
       </main>
@@ -62,8 +62,8 @@ export default function ContactPage() {
 
 function InquirySection() {
   return (
-    <section className="min-h-[870px] flex flex-col md:flex-row items-stretch overflow-hidden">
-      <div className="w-full md:w-1/2 relative min-h-[400px]">
+    <section className="flex flex-col md:flex-row items-stretch overflow-hidden md:min-h-[870px]">
+      <div className="w-full md:w-1/2 relative min-h-[240px] sm:min-h-[320px] md:min-h-[400px]">
         <Image
           src={HERO_IMAGE}
           alt="Boardroom with dark wood table overlooking a city skyline"
@@ -75,7 +75,7 @@ function InquirySection() {
         <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
       </div>
 
-      <div className="w-full md:w-1/2 flex items-center justify-center p-12 lg:p-24 bg-surface-container-lowest">
+      <div className="w-full md:w-1/2 flex items-center justify-center p-6 sm:p-10 md:p-12 lg:p-24 bg-surface-container-lowest">
         <div className="max-w-md w-full">
           <span className="text-label-caps text-primary/60 mb-4 block uppercase">
             Private Client Access
@@ -85,7 +85,7 @@ function InquirySection() {
           </h1>
           <p className="text-body-lg text-secondary mb-12">
             Every inquiry reaches a founding partner directly. Complete this
-            brief to begin a confidential conversation with the BOTA Estate
+            brief to begin a confidential conversation with the BOTA Private
             Office.
           </p>
           <ContactForm />

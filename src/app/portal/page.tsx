@@ -16,7 +16,7 @@ export default function PortalPage() {
   return (
     <>
       <SiteHeader />
-      <main className="pt-24 bg-surface-container-low min-h-screen flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap">
+      <main className="pt-header bg-surface-container-low min-h-screen flex items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap">
         <div className="max-w-md w-full">
           <div className="bg-surface-container-lowest border border-outline-variant/30 p-10 md:p-12">
             <div className="flex items-center gap-3 mb-8">
@@ -31,7 +31,7 @@ export default function PortalPage() {
             </h1>
             <p className="text-body-md text-secondary mb-10">
               This area is reserved for active BOTA family clients. Sign in
-              with the credentials issued by your relationship partner.
+              with the credentials issued by your founding partner.
             </p>
 
             <PortalLoginForm />

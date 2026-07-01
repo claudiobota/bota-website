@@ -49,8 +49,8 @@ const PLATFORMS = [
     icon: "hub",
     title: "Third-Party Platforms & Feeder Funds",
     subtitle: "Curated access for assets beyond our network",
-    body: "For assets where we lack direct access, we invest via regulated third-party platforms (Stablecoin) or LP commitments in small funds and co-investment vehicles. Ticket sizes are deliberately modest — typically $200k–$600k — to reflect the platform fees, lock-up periods and limited secondary liquidity of these vehicles.",
-    tags: ["Stablecoin", "LP commitments", "Co-investment vehicles"],
+    body: "For assets where we lack direct access, we invest via regulated third-party private-markets platforms or LP commitments in small funds and co-investment vehicles. Ticket sizes are deliberately modest — typically €200k–€600k — to reflect the platform fees, lock-up periods and limited secondary liquidity of these vehicles.",
+    tags: ["Private-markets platforms", "LP commitments", "Co-investment vehicles"],
     disclaimer:
       "Investments via third-party platforms involve additional fees charged by the platform operator and may carry extended lock-up periods and reduced secondary liquidity relative to direct holdings.",
   },
@@ -60,7 +60,7 @@ export default function PrivateEquityPage() {
   return (
     <>
       <SiteHeader active="investments" />
-      <main className="pt-24">
+      <main className="pt-header">
         <Hero />
         <Strategy />
         <MandateCriteria />
@@ -147,7 +147,7 @@ function Strategy() {
           </p>
           <p>
             Our hold horizon is a minimum of seven years, with an explicit bias
-            toward permanent capital positions where exit is optionality rather
+            towards permanent capital positions where exit is optionality rather
             than necessity. This long-duration perspective allows us to partner
             with management teams operating on the timescales that genuinely
             transformative technology demands.

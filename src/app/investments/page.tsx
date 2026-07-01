@@ -32,7 +32,7 @@ const PILLARS = [
     pillar: "Pillar III",
     title: "Capital Markets",
     slug: "capital-markets",
-    body: "Systematic deployment of capital across global liquid markets, utilizing proprietary risk-parity models and hedging.",
+    body: "Systematic deployment of capital across global liquid markets, utilising proprietary risk-parity models and hedging.",
     image:
       "https://lh3.googleusercontent.com/aida-public/AB6AXuChvrHnGZbyjKiEBqZGMy71NprDKmD-T6oD7QD_Z5ECB1ZG2VgBzshonExcItzxax0vguphu9sYRZkWOhawGJCt1NSR9qcui5htkj61xVlhlb-_mblJih5R4rNlunxwnZaFs9zgAhTnW5WaW51BOfvhbOAdBPIH4EKTed0fgssSyoaqb7xGYaiIkYv_8Ze_As7rGXENky2ab_-lxkQ6LIzaVAFYL13Ywwe3RpvI3kO_ZRUHtTbVVq-h2RsO8lF6WDkRx3wdyj9zfcs",
   },
@@ -52,7 +52,7 @@ export default function InvestmentsPage() {
   return (
     <>
       <SiteHeader active="investments" />
-      <main className="pt-24">
+      <main className="pt-header">
         <PortfolioHero />
         <GlobalFootprint />
         <ScaleStats />
@@ -88,7 +88,7 @@ function GlobalFootprint() {
   return (
     <section className="pb-section-gap px-margin-mobile md:px-margin-desktop max-w-page mx-auto">
       <h2 className="font-display text-headline-lg text-primary mb-12">
-        Our Global Footprint
+        Our Investment Pillars
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
         {PILLARS.map((pillar) => (
@@ -161,7 +161,7 @@ function ScaleStats() {
 
 function Stat({ value, label }: { value: string; label: string }) {
   return (
-    <div className="flex flex-col justify-center items-start border-l border-on-primary/10 pl-12">
+    <div className="flex flex-col justify-center items-start md:border-l border-on-primary/10 md:pl-12 pt-6 md:pt-0 border-t md:border-t-0 border-on-primary/10">
       <span className="font-display text-display-lg leading-none mb-2">
         {value}
       </span>
@@ -202,7 +202,7 @@ function GeographicFocus() {
             ))}
           </ul>
         </div>
-        <div className="lg:col-span-8 h-[500px] bg-surface-container-low relative overflow-hidden rounded-lg group">
+        <div className="lg:col-span-8 h-[280px] sm:h-[360px] md:h-[500px] bg-surface-container-low relative overflow-hidden rounded-lg group">
           <Image
             src={MAP_IMAGE}
             alt="Global footprint map"

@@ -16,7 +16,7 @@ export default function OfficesPage() {
   return (
     <>
       <SiteHeader />
-      <main className="pt-24">
+      <main className="pt-header">
         <OfficesHero />
         <GlobeBand />
         <RosterGrid />
@@ -37,7 +37,7 @@ function OfficesHero() {
       <div className="max-w-page mx-auto px-margin-mobile md:px-margin-desktop py-section-gap relative">
         <nav
           aria-label="Breadcrumb"
-          className="flex items-center gap-3 text-label-caps uppercase text-secondary/70 mb-12"
+          className="flex flex-wrap items-center gap-3 text-label-caps uppercase text-secondary/70 mb-12"
         >
           <Link href="/" className="hover:text-primary transition-colors">
             BOTA
@@ -158,7 +158,7 @@ function RosterGrid() {
           {OFFICES.map((office) => (
             <article
               key={office.id}
-              className="group border border-outline-variant/40 bg-surface-container-lowest p-10 hover:border-primary/40 transition-all duration-500 flex flex-col gap-6"
+              className="group border border-outline-variant/40 bg-surface-container-lowest p-6 md:p-10 hover:border-primary/40 transition-all duration-500 flex flex-col gap-6"
             >
               <header className="flex items-baseline justify-between">
                 <span className="font-display text-label-caps text-on-primary-container tracking-[0.2em]">

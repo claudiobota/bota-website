@@ -21,7 +21,7 @@ const PILLARS = [
     bullets: [
       "Multi-generational Trust Structuring",
       "Asset Protection Strategies",
-      "Tax Optimization & Compliance",
+      "Tax Optimisation & Compliance",
     ],
   },
   {
@@ -71,7 +71,7 @@ export default function HomePage() {
 
 function HeroSection() {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-[100svh] min-h-[480px] flex items-center justify-center overflow-hidden">
       <Image
         src={HERO_IMAGE}
         alt="Architectural focus of a modern estate"
@@ -81,7 +81,7 @@ function HeroSection() {
         className="object-cover scale-105"
       />
       <div className="absolute inset-0 bg-primary/20 backdrop-brightness-75" />
-      <div className="relative z-10 text-center max-w-4xl px-margin-mobile md:px-margin-desktop">
+      <div className="relative z-10 text-center max-w-4xl px-margin-mobile md:px-margin-desktop pt-16">
         <span className="text-label-caps text-on-primary/80 mb-6 block uppercase tracking-[0.3em]">
           Established MMXVI
         </span>
@@ -98,13 +98,13 @@ function HeroSection() {
         <div className="flex flex-col sm:flex-row justify-center gap-6">
           <Link
             href="/strategy"
-            className="bg-white text-primary px-10 py-5 text-label-caps hover:bg-surface-container-low transition-all"
+            className="bg-white text-primary px-6 py-4 md:px-10 md:py-5 text-label-caps hover:bg-surface-container-low transition-all"
           >
-            Explore Heritage
+            Explore Our Philosophy
           </Link>
           <Link
             href="/contact"
-            className="border border-white text-white px-10 py-5 text-label-caps hover:bg-white/10 transition-all"
+            className="border border-white text-white px-6 py-4 md:px-10 md:py-5 text-label-caps hover:bg-white/10 transition-all"
           >
             The Private Office
           </Link>
@@ -123,7 +123,7 @@ function HeroSection() {
 function OurOriginSection() {
   return (
     <section className="py-section-gap bg-surface">
-      <div className="max-w-page mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center">
+      <div className="max-w-page mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center gap-y-12">
         <div className="col-span-12 md:col-span-5">
           <span className="text-label-caps text-on-primary-container mb-4 block uppercase">
             Our Founding
@@ -182,7 +182,7 @@ function PillarsSection() {
   return (
     <section className="py-section-gap bg-surface-container-low">
       <div className="max-w-page mx-auto px-margin-mobile md:px-margin-desktop">
-        <div className="text-center mb-20">
+        <div className="text-center mb-12 md:mb-20">
           <span className="text-label-caps text-on-primary-container mb-4 block uppercase">
             Strategic Architecture
           </span>
@@ -195,7 +195,7 @@ function PillarsSection() {
           {PILLARS.map((pillar) => (
             <article
               key={pillar.title}
-              className="bg-surface p-12 border border-outline-variant/30 hover:border-primary-container transition-all group"
+              className="bg-surface p-6 md:p-12 border border-outline-variant/30 hover:border-primary-container transition-all group"
             >
               <div className="w-12 h-12 flex items-center justify-center bg-primary-container/10 text-primary-container mb-8 group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
                 <MaterialIcon name={pillar.icon} />
@@ -225,7 +225,7 @@ function PillarsSection() {
 
 function GlobalPresenceSection() {
   return (
-    <section className="relative py-[160px] overflow-hidden text-white">
+    <section className="relative py-section-gap md:py-40 overflow-hidden text-white">
       <div className="absolute inset-0 z-0">
         <Image
           src={GLOBAL_IMAGE}
@@ -236,7 +236,7 @@ function GlobalPresenceSection() {
           className="object-cover brightness-[0.2]"
         />
       </div>
-      <div className="relative z-10 max-w-page mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center">
+      <div className="relative z-10 max-w-page mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter items-center gap-y-12">
         <div className="col-span-12 md:col-span-6">
           <span className="text-label-caps text-on-primary-container mb-4 block uppercase">
             Global Presence
@@ -247,10 +247,10 @@ function GlobalPresenceSection() {
           <p className="text-body-lg text-white/70 mb-12">
             From our founding office in New York, BOTA has expanded across
             the Atlantic to Lugano, Milan and London - four offices,
-            chosen deliberately to cover the financial centers that matter
+            chosen deliberately to cover the financial centres that matter
             to our families.
           </p>
-          <div className="grid grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
             {OFFICES.map((office) => (
               <div key={office.city}>
                 <p className="font-display text-headline-sm mb-2">
@@ -263,7 +263,7 @@ function GlobalPresenceSection() {
         </div>
 
         <div className="col-span-12 md:col-span-5 md:col-start-8">
-          <div className="p-10 border border-white/10 backdrop-blur-md bg-white/5">
+          <div className="p-6 md:p-10 border border-white/10 backdrop-blur-md bg-white/5">
             <h3 className="font-display text-headline-sm mb-6">
               Direct Partnership
             </h3>
@@ -301,7 +301,7 @@ function PhilosophyCtaSection() {
         <div className="inline-block relative">
           <Link
             href="/strategy"
-            className="bg-primary text-on-primary px-16 py-6 text-label-caps inline-block hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
+            className="bg-primary text-on-primary px-8 py-5 md:px-16 md:py-6 text-label-caps inline-block hover:shadow-2xl hover:-translate-y-1 transition-all duration-300"
           >
             Explore Our Philosophy
           </Link>

@@ -18,7 +18,7 @@ const MANDATE_CRITERIA = [
   {
     icon: "shield",
     title: "Core & Core-Plus Only",
-    body: "We do not speculate on value-add or opportunistic risk. Every acquisition must demonstrate durable income from day one, with an irreplaceable location as its fundamental underpin.",
+    body: "We do not speculate on value-add or opportunistic risk. Every acquisition must demonstrate durable income from day one, with an irreplaceable location as its fundamental underpinning.",
   },
   {
     icon: "location_city",
@@ -42,8 +42,8 @@ const ACCESS_CHANNELS = [
     icon: "key",
     title: "Direct Acquisition",
     subtitle: "Principal capital, off-market where possible",
-    body: "The majority of our real estate is acquired directly, typically off-market via personal introductions. Ticket sizes range from €600k to £1.2M. We act as a single principal, which gives us speed and discretion that larger buyers cannot match.",
-    tags: ["Off-market preference", "€600k–£1.2M tickets", "Principal capital"],
+    body: "The majority of our real estate is acquired directly, typically off-market via personal introductions. Ticket sizes range from €600k to €1.2M. We act as a single principal, which gives us speed and discretion that larger buyers cannot match.",
+    tags: ["Off-market preference", "€600k–€1.2M tickets", "Principal capital"],
   },
   {
     icon: "handshake",
@@ -58,7 +58,7 @@ export default function RealEstatePage() {
   return (
     <>
       <SiteHeader active="investments" />
-      <main className="pt-24">
+      <main className="pt-header">
         <Hero />
         <StrategySection />
         <MandateCriteria />
@@ -72,7 +72,7 @@ export default function RealEstatePage() {
 
 function Hero() {
   return (
-    <section className="relative bg-primary text-on-primary overflow-hidden min-h-[520px] flex items-end">
+    <section className="relative bg-primary text-on-primary overflow-hidden min-h-[360px] md:min-h-[520px] flex items-end">
       {/* Backdrop image - grayscale, low opacity */}
       <div className="absolute inset-0">
         <Image

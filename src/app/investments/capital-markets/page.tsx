@@ -8,7 +8,7 @@ import { MaterialIcon } from "@/components/MaterialIcon";
 export const metadata: Metadata = {
   title: "Capital Markets - BOTA Holdings",
   description:
-    "Systematic deployment of capital across global liquid markets, utilizing proprietary risk-parity models and hedging strategies across macro, equities, trend, and volatility.",
+    "Systematic deployment of capital across global liquid markets, utilising proprietary risk-parity models and hedging strategies across macro, equities, trend, and volatility.",
 };
 
 const HERO_IMAGE =
@@ -23,7 +23,7 @@ const STRATEGIES = [
   {
     icon: "show_chart",
     title: "Long / Short Equity",
-    body: "Fundamental long/short across global equities; concentrated 20–30 name book with hard 15% single-name cap; bias toward industrials, energy, and financials.",
+    body: "Fundamental long/short across global equities; concentrated 20–30 name book with hard 15% single-name cap; bias towards industrials, energy, and financials.",
   },
   {
     icon: "trending_up",
@@ -40,8 +40,8 @@ const STRATEGIES = [
 const PLATFORMS = [
   {
     icon: "account_balance",
-    title: "Internal Discretionary Accounts",
-    body: "The liquid book is managed directly by the founding partners through personal and family discretionary accounts. There is no external fund structure; all capital is proprietary.",
+    title: "Discretionary Managed Accounts",
+    body: "The liquid book is managed on a fully discretionary basis for the families we serve, held in each family's own segregated account rather than a commingled fund. The founding partners invest their own capital alongside every mandate, so interests stay fully aligned.",
   },
   {
     icon: "hub",
@@ -54,7 +54,7 @@ export default function CapitalMarketsPage() {
   return (
     <>
       <SiteHeader active="investments" />
-      <main className="pt-24">
+      <main className="pt-header">
         <Hero />
         <StrategyThesis />
         <StrategyPillars />
@@ -124,7 +124,7 @@ function StrategyThesis() {
             Investment Thesis
           </span>
           <h2 className="font-display text-headline-lg text-primary leading-snug">
-            The Firm's Shock Absorber & Opportunity Fund
+            The Firm's Shock Absorber & Opportunity Engine
           </h2>
         </div>
         <div className="lg:col-span-8 space-y-6">
@@ -146,7 +146,8 @@ function StrategyThesis() {
             — including the February 2018 vol spike, the March 2020
             COVID dislocation, and the 2022 rate-shock cycle — each of
             which has sharpened our risk protocols. The book remains small
-            and proprietary; all capital is the founding partners’ own.
+            and deliberately limited; the founding partners invest their own
+            capital alongside the families we serve.
           </p>
           <div className="flex items-start gap-4 border-l-2 border-primary pl-6 py-2">
             <p className="text-body-md text-primary leading-relaxed italic">

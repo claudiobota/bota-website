@@ -44,7 +44,7 @@ export default function StrategyPage() {
   return (
     <>
       <SiteHeader active="strategy" />
-      <main className="pt-24">
+      <main className="pt-header">
         <StewardshipHero />
         <DirectorsQuote />
         <LongTermHorizon />
@@ -58,7 +58,7 @@ export default function StrategyPage() {
 
 function StewardshipHero() {
   return (
-    <section className="relative min-h-[819px] flex items-center overflow-hidden">
+    <section className="relative min-h-[50vh] md:min-h-[819px] flex items-center overflow-hidden py-section-gap md:py-0">
       <div className="absolute inset-0 z-0">
         <Image
           src={HERO_IMAGE}
@@ -140,7 +140,7 @@ function LongTermHorizon() {
           </ul>
         </div>
         <div className="col-span-12 md:col-span-6 md:col-start-8">
-          <div className="aspect-[4/5] relative border border-outline-variant p-12 flex items-center justify-center overflow-hidden">
+          <div className="aspect-[4/5] relative border border-outline-variant p-6 md:p-12 flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 bg-surface-container-low opacity-50" />
             <Image
               src={HORIZON_IMAGE}
@@ -172,13 +172,13 @@ function RiskAndResilience() {
           </div>
           <p className="text-body-md text-secondary max-w-sm">
             Our defensive posture is as critical as our pursuit of growth. We
-            utilize asymmetric hedging and proprietary stress-testing to
+            utilise asymmetric hedging and proprietary stress-testing to
             ensure systemic endurance.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-          <article className="group bg-surface-container-lowest border border-outline-variant/30 p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+          <article className="group bg-surface-container-lowest border border-outline-variant/30 p-6 md:p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
             <div className="flex justify-between items-start mb-12">
               <MaterialIcon
                 name="waves"
@@ -206,7 +206,7 @@ function RiskAndResilience() {
             </Link>
           </article>
 
-          <article className="group bg-primary text-on-primary p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+          <article className="group bg-primary text-on-primary p-6 md:p-12 transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
             <div className="flex justify-between items-start mb-12">
               <MaterialIcon
                 name="security"
@@ -229,7 +229,7 @@ function RiskAndResilience() {
               href="/investments"
               className="inline-flex items-center gap-2 text-label-caps text-on-primary hover:gap-4 transition-all uppercase"
             >
-              View Stratagems
+              View Strategies
               <MaterialIcon name="arrow_forward" />
             </Link>
           </article>
@@ -289,10 +289,10 @@ function SustainableGrowth() {
                   className="object-cover opacity-60 grayscale group-hover:grayscale-0 transition-all duration-1000"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-6 bg-surface p-8 text-primary shadow-xl">
+              <div className="absolute -bottom-4 left-0 md:-bottom-6 md:-left-6 bg-surface p-6 md:p-8 text-primary shadow-xl">
                 <p className="font-display text-headline-md mb-2">12.4%</p>
                 <p className="text-label-caps text-secondary uppercase">
-                  Annualized Impact Return
+                  Annualised Impact Return
                 </p>
               </div>
             </div>

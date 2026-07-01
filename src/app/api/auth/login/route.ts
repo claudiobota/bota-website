@@ -45,7 +45,7 @@ export async function POST(request: Request) {
     {
       error: "invalid_credentials",
       message:
-        "We could not authenticate that member ID. Please contact your relationship partner to recover access.",
+        "We could not authenticate that member ID. Please contact your founding partner to recover access.",
     },
     {
       status: 401,

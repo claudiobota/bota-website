@@ -224,6 +224,7 @@ export function OfficesGlobe() {
                   type="button"
                   onMouseEnter={() => setActiveId(office.id)}
                   onFocus={() => setActiveId(office.id)}
+                  onClick={() => setActiveId(office.id)}
                   aria-label={`Focus globe on ${office.city} office`}
                   className="absolute group"
                   style={{
@@ -324,7 +325,7 @@ function OfficeRoster({
   return (
     <div className="text-on-primary">
       <p className="text-label-caps uppercase text-on-primary-container mb-4">
-        Hover an office
+        Select an office
       </p>
 
       <ul className="divide-y divide-on-primary/10 border-t border-b border-on-primary/10 mb-10">
@@ -336,6 +337,7 @@ function OfficeRoster({
                 type="button"
                 onMouseEnter={() => onHover(office.id)}
                 onFocus={() => onHover(office.id)}
+                onClick={() => onHover(office.id)}
                 aria-pressed={isActive}
                 className="group w-full text-left py-5 flex items-baseline justify-between gap-6 transition-colors"
               >
