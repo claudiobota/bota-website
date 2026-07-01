@@ -37,7 +37,7 @@ export const OFFICES: Office[] = [
       "Public-market portfolio construction",
       "Family governance",
     ],
-    languages: ["English", "Spanish", "Portuguese"],
+    languages: ["English", "Italian", "French"],
   },
   {
     id: "lugano",
